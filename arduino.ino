@@ -36,18 +36,20 @@ void manejarComandosSerial() {
       case 'D':
         encenderGrupoD();
         break;
-      case 'E':
+      case 'a':
         apagarGrupoA();
         break;
-      case 'F':
+      case 'b':
         apagarGrupoB();
         break;
-      case 'G':
+      case 'c':
         apagarGrupoC();
         break;
-      case 'H':
+      case 'd':
         apagarGrupoD();
         break;
+   
+
       default:
         break;
     }
@@ -99,14 +101,18 @@ void apagarGrupoD() {
 void manejarBotones() {
   if (digitalRead(10) == LOW) {
     toggleGrupoA();
+    Serial.print("Grupo encendido por medio de pushbutton");
     delay(100);
   } else if (digitalRead(11) == LOW) {
     toggleGrupoB();
+     Serial.print("Grupo encendido por medio de pushbutton");
     delay(100);
   } else if (digitalRead(12) == LOW) {
-    toggleGrupoC();
+        toggleGrupoC();
+         Serial.print("Grupo encendido por medio de pushbutton");
     delay(100);
   } else if (digitalRead(13) == LOW) {
+     Serial.print("Grupo encendido por medio de pushbutton");
     toggleGrupoD();
     delay(100);
   }
